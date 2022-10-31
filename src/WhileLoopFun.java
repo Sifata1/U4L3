@@ -26,7 +26,7 @@ public class WhileLoopFun
         return facTotal;
     }
 
-    public String printDigits(int number) {
+    public void printDigits(int number) {
         String s =String.valueOf(number);
         int x = s.length();
         int y = 0;
@@ -36,9 +36,5 @@ public class WhileLoopFun
             System.out.println(digits);
             x--;
         }
-        return digits;
     }
-//   digits = s.substring(y,y+1);
-//            System.out.println(digits);
-//            y++;
     }

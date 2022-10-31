@@ -13,7 +13,7 @@ public class Main {
         System.out.println("--");
         fun.printDigits(361);
         System.out.println("--");
-        fun.printDigits(150856);
+        fun.printDigits(1231513257);
 
 
 
