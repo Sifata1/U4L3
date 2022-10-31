@@ -4,16 +4,11 @@ public class Main {
     public static void main(String[] args)
     {
         WhileLoopFun fun = new WhileLoopFun();
-        System.out.println("-- test factorial --");
-        System.out.println(fun.factorial(6));
-        System.out.println(fun.factorial(10));
-        System.out.println(fun.factorial(20));
-        System.out.println("-- test printDigits --");
-        fun.printDigits(5);
-        System.out.println("--");
-        fun.printDigits(361);
-        System.out.println("--");
-        fun.printDigits(1231513257);
+        System.out.println("-- test sumOfDigits --");
+        System.out.println(fun.sumOfDigits(80));
+        System.out.println(fun.sumOfDigits(361));
+        System.out.println(fun.sumOfDigits(150856));
+
 
 
 

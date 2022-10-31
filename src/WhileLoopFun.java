@@ -37,4 +37,19 @@ public class WhileLoopFun
             x--;
         }
     }
+
+    public int sumOfDigits(int number) {
+        String s =String.valueOf(number);
+        int x = s.length();
+        int y = 0;
+        int sum = 0;
+        String digits = "";
+        while (x != y) {
+            digits = s.substring(x-1,x);
+            int total = Integer.parseInt(digits);
+            sum = sum + total;
+            x--;
+        }
+        return sum;
+    }
     }
