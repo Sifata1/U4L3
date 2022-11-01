@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class WhileLoopFun {
     /**
      * This class has no instance variables, so we can either include no constructor,
@@ -82,4 +83,58 @@ public class WhileLoopFun {
         }
         return d;
     }
+
+    public void maxMin() {
+        Scanner s = new Scanner(System.in);
+        int x = 0;
+        int max = 0;
+        int min = 0;
+        while (x != -1) {
+            System.out.print("Enter a number (or -1 to quit): ");
+            x = s.nextInt();
+            if (x == -1) {
+                System.out.println("You did not enter any numbers!");
+            } else if (x > max) {
+                max =x;
+            } else if (x<min) {
+                min = x;
+            }
+        }
+        System.out.println("Max is: " + max);
+        System.out.println("Min is: " + min);
+
+    }
 }
+
+// if (x != -1) {
+//                System.out.println(x);
+//                System.out.print("Enter a number (or -1 to quit): ");
+//                if (s.nextInt() > x) {
+//                    max = s.nextInt();
+//                }
+//                if (s.nextInt() < x) {
+//                    min = s.nextInt();
+//                }
+//                x = s.nextInt();
+//            }
+
+/* int max = 0;
+        int min = 0;
+        System.out.print("Enter a number (or -1 to quit): ");
+        Scanner s = new Scanner(System.in);
+        int x = s.nextInt();
+        System.out.println(x);
+        while (x != -1) {
+            System.out.print("Enter a number (or -1 to quit): ");
+            int y = s.nextInt();
+            if (y > max) {
+                y = max;
+            } else if (y < min) {
+                y = max;
+            }
+            x = s.nextInt();
+
+        }
+        System.out.println("Max is " + max);
+        System.out.println("Min is " + min);
+        */
