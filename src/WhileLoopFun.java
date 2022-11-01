@@ -163,30 +163,23 @@ public class WhileLoopFun {
 
  */
 
-    public void maxMin() {
+    public static void maxMin() {
         Scanner s = new Scanner(System.in);
         int x = 0;
-        int max = 0;
-        int min = 0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
         while (x != -1) {
-            System.out.print("Enter a number (or -1 to quit): ");
+            System.out.println("Enter number: ");
             x = s.nextInt();
-            if (x == -1) {
-                System.out.println("You did not enter any numbers!");
-            } else if (x > max) {
-                if (max != -1) {
-                    max = x;
-                }
+            if (x != -1) {
+                if (x < min) min = x; }
 
-            } else if (x < min) {
-                if (min != -1) {
-                    min = x;
-                }
-
+                if (x > max) { max = x;
             }
+            else System.out.println("none");
         }
-        System.out.println("Max is: " + max);
-        System.out.println("Min is: " + min);
-
+        System.out.println("max: "+ max);
+        System.out.println("min: "+ min);
     }
+
 }
