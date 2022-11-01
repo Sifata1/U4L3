@@ -58,9 +58,9 @@ public class WhileLoopFun {
     public boolean isPrime(int number) {
         int d = 2;
         boolean prime = true;
-        while (d <= number / 2 ) {
+        while (d <= number / 2) {
             if (number % d == 0) {
-                prime =false;
+                prime = false;
                 d++;
             } else if (number % d != 0) {
                 prime = true;
@@ -68,15 +68,16 @@ public class WhileLoopFun {
             }
         }
         if (number == 1) {
-            prime = false; }
+            prime = false;
+        }
         return prime;
     }
 
 
     public int maxDoubles(int number, int threshold) {
-            int d =0;
-            while (number <= threshold) {
-            number = number *2;
+        int d = 0;
+        while (number <= threshold) {
+            number = number * 2;
             if (number <= threshold) {
                 d++;
             }
@@ -84,27 +85,32 @@ public class WhileLoopFun {
         return d;
     }
 
-    public void maxMin() {
+    /* public void maxMin() {
         Scanner s = new Scanner(System.in);
         int x = 0;
+        int y = 0;
         int max = 0;
         int min = 0;
         while (x != -1) {
             System.out.print("Enter a number (or -1 to quit): ");
             x = s.nextInt();
-            if (x == -1) {
-                System.out.println("You did not enter any numbers!");
-            } else if (x > max) {
+            y = s.nextInt();
+            if (x > max) {
                 max =x;
+                max = y;
             } else if (x<min) {
                 min = x;
+                min = y;
             }
         }
         System.out.println("Max is: " + max);
         System.out.println("Min is: " + min);
+        }
+
 
     }
-}
+    /*
+     */
 
 // if (x != -1) {
 //                System.out.println(x);
@@ -138,3 +144,49 @@ public class WhileLoopFun {
         System.out.println("Max is " + max);
         System.out.println("Min is " + min);
         */
+
+/*   if (x == -1) {
+            System.out.println("You did not enter any numbers!");
+        } else {
+            while (x != -1) {
+                System.out.print("Enter a number (or -1 to quit): ");
+                x = s.nextInt();
+                if (x > max) {
+                    max =x;
+                } else if (x<min) {
+                    min = x;
+                }
+            }
+            System.out.println("Max is: " + max);
+            System.out.println("Min is: " + min);
+        }
+
+ */
+
+    public void maxMin() {
+        Scanner s = new Scanner(System.in);
+        int x = 0;
+        int max = 0;
+        int min = 0;
+        while (x != -1) {
+            System.out.print("Enter a number (or -1 to quit): ");
+            x = s.nextInt();
+            if (x == -1) {
+                System.out.println("You did not enter any numbers!");
+            } else if (x > max) {
+                if (max != -1) {
+                    max = x;
+                }
+
+            } else if (x < min) {
+                if (min != -1) {
+                    min = x;
+                }
+
+            }
+        }
+        System.out.println("Max is: " + max);
+        System.out.println("Min is: " + min);
+
+    }
+}
