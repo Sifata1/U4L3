@@ -88,23 +88,29 @@ public class WhileLoopFun {
     public static void maxMin() {
         Scanner s = new Scanner(System.in);
         int x = 0;
+        String w = "";
         int sum = 0;
         int d = 0;
         int max = Integer.MIN_VALUE;
         int min = Integer.MAX_VALUE;
-        System.out.print("Enter a number (or -1 to quit): ");
-        x = s.nextInt();
-        if (x == -1) {
+        System.out.print("Enter a number (or q to quit): ");
+        w = s.nextLine();
+        if (w == "q") {
             System.out.print("You did not enter any numbers!");
-        } else if (x != -1) {
-            while (x != -1) {
-                System.out.print("Enter a number (or -1 to quit): ");
-                x = s.nextInt();
-                if (x != -1) {
+        } else {
+             x = Integer.parseInt(w);
+        }
+        if (x != -1) {
+            while (w != "q") {
+                System.out.print("Enter a number (or q to quit): ");
+                w = s.nextLine();
+                if (w != "q") {
+                    x = Integer.parseInt(w);
                     if (x < min) min = x;
                 }
 
                 if (x > max) {
+                    x = Integer.parseInt(w);
                     max = x;
                 }
             }
