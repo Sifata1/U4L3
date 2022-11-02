@@ -182,4 +182,30 @@ public class WhileLoopFun {
             System.out.println("min: " + min);
         }
     }
+
+    public static void RunningAverage() {
+        Scanner s = new Scanner(System.in);
+        int x = 0;
+        int sum = 0;
+        int d =0;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        System.out.print("Enter a number (or -1 to quit): ");
+        x = s.nextInt();
+        if (x == -1) {
+            System.out.print( "You did not enter any numbers!");
+        } else if (x != -1) {
+            while (x != -1) {
+                System.out.print("Enter a number (or -1 to quit): ");
+                sum = sum + x;
+                d++;
+                x = s.nextInt();
+
+
+
+            }
+            System.out.println(sum);
+        }
+
+    }
 }
